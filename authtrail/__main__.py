@@ -2,6 +2,7 @@
 
 import argparse
 import gzip
+import os
 import sys
 from pathlib import Path
 
@@ -102,7 +103,7 @@ def main(argv=None):
     if args.json == "-":
         print(to_json(analysis))
     else:
-        color = not args.no_color and sys.stdout.isatty()
+        color = not args.no_color and (sys.stdout.isatty() or bool(os.environ.get("FORCE_COLOR")))
         print(to_terminal(analysis, color=color, min_severity=args.min_severity,
                           fancy=can_encode(sys.stdout, "─▁█→·")))
         if args.json:
