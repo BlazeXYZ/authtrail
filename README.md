@@ -344,6 +344,10 @@ CI runs on Ubuntu and Windows with Python 3.11, 3.13 and 3.14, and also runs the
 
 authtrail is a defensive tool for analyzing logs from systems you own or are authorized to investigate. Auth logs contain usernames and IP addresses, which may be personal data, so handle reports according to your organization's data-handling rules.
 
-## License
+---
 
-MIT. See [LICENSE](LICENSE).
+<div align="center">
+
+MIT License · Built by <b>BlazeXYZ</b> · See also: <a href="CHANGELOG.md">Changelog</a>
+
+</div>
