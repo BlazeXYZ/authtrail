@@ -1,0 +1,33 @@
+name: tests
+
+on:
+  push:
+  pull_request:
+
+# Least privilege: the workflow only needs to read the code.
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      # Report every combination, so one broken job can't hide the others' results.
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+        # Oldest supported, a middle version, and the newest release.
+        python-version: ["3.11", "3.13", "3.14"]
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Run unit tests
+        run: python -m unittest discover -s tests -t . -v
+      - name: Analyze samples
+        # --fail-on never: the compromise sample should be reported, not fail the job.
+        # An error (exit 2, such as no recognizable log lines) still fails it.
+        shell: bash
+        run: |
+          python -m authtrail samples --year 2026 --no-color --html report.html --fail-on never

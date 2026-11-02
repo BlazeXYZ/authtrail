@@ -1,0 +1,78 @@
+Oct 27 00:17:00 web01 CRON[4011]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Oct 27 00:17:01 web01 CRON[4011]: pam_unix(cron:session): session closed for user root
+Oct 27 01:17:00 web01 CRON[4050]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Oct 27 01:17:01 web01 CRON[4050]: pam_unix(cron:session): session closed for user root
+Oct 27 02:17:00 web01 CRON[4057]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Oct 27 02:17:01 web01 CRON[4057]: pam_unix(cron:session): session closed for user root
+Oct 27 03:17:00 web01 CRON[4076]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Oct 27 03:17:01 web01 CRON[4076]: pam_unix(cron:session): session closed for user root
+Oct 27 04:17:00 web01 CRON[4086]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Oct 27 04:17:01 web01 CRON[4086]: pam_unix(cron:session): session closed for user root
+Oct 27 04:35:00 web01 sshd[4530]: Failed password for root from 198.51.100.200 port 44095 ssh2
+Oct 27 04:35:03 web01 sshd[4530]: message repeated 2 times: [ Failed password for root from 198.51.100.200 port 44095 ssh2]
+Oct 27 04:35:08 web01 sshd[4530]: Connection closed by authenticating user root 198.51.100.200 port 44095 [preauth]
+Oct 27 05:17:00 web01 CRON[4120]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Oct 27 05:17:01 web01 CRON[4120]: pam_unix(cron:session): session closed for user root
+Oct 27 06:17:00 web01 CRON[4151]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Oct 27 06:17:01 web01 CRON[4151]: pam_unix(cron:session): session closed for user root
+Oct 27 07:17:00 web01 CRON[4184]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Oct 27 07:17:01 web01 CRON[4184]: pam_unix(cron:session): session closed for user root
+Oct 27 08:02:00 web01 sshd[4486]: Accepted publickey for admin from 10.20.0.15 port 54052 ssh2: ED25519 SHA256:1e029a8a3f415b02
+Oct 27 08:02:00 web01 sshd[4486]: pam_unix(sshd:session): session opened for user admin(uid=1000) by (uid=0)
+Oct 27 08:02:01 web01 systemd-logind[4513]: New session 24 of user admin.
+Oct 27 08:05:15 web01 sudo:    admin : TTY=pts/1 ; PWD=/home/admin ; USER=root ; COMMAND=/usr/bin/apt update
+Oct 27 08:07:23 web01 sudo:    admin : TTY=pts/0 ; PWD=/home/admin ; USER=root ; COMMAND=/usr/bin/apt upgrade -y
+Oct 27 08:09:58 web01 sudo:    admin : TTY=pts/1 ; PWD=/home/admin ; USER=root ; COMMAND=/usr/bin/systemctl restart nginx
+Oct 27 08:13:33 web01 sudo:    admin : TTY=pts/3 ; PWD=/home/admin ; USER=root ; COMMAND=/usr/bin/tail -n 100 /var/log/nginx/error.log
+Oct 27 08:17:00 web01 CRON[4211]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Oct 27 08:17:01 web01 CRON[4211]: pam_unix(cron:session): session closed for user root
+Oct 27 08:45:00 web01 sshd[4486]: Received disconnect from 10.20.0.15 port 54052:11: disconnected by user
+Oct 27 08:45:00 web01 sshd[4486]: pam_unix(sshd:session): session closed for user admin
+Oct 27 09:17:00 web01 CRON[4227]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Oct 27 09:17:01 web01 CRON[4227]: pam_unix(cron:session): session closed for user root
+Oct 27 10:17:00 web01 CRON[4236]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Oct 27 10:17:01 web01 CRON[4236]: pam_unix(cron:session): session closed for user root
+Oct 27 11:14:00 web01 sshd[4547]: Invalid user oracle from 203.0.113.99 port 57702
+Oct 27 11:14:00 web01 sshd[4547]: Failed password for invalid user oracle from 203.0.113.99 port 57702 ssh2
+Oct 27 11:14:03 web01 sshd[4547]: message repeated 1 times: [ Failed password for invalid user oracle from 203.0.113.99 port 57702 ssh2]
+Oct 27 11:14:06 web01 sshd[4547]: Connection closed by invalid user oracle 203.0.113.99 port 57702 [preauth]
+Oct 27 11:17:00 web01 CRON[4270]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Oct 27 11:17:01 web01 CRON[4270]: pam_unix(cron:session): session closed for user root
+Oct 27 12:17:00 web01 CRON[4274]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Oct 27 12:17:01 web01 CRON[4274]: pam_unix(cron:session): session closed for user root
+Oct 27 13:10:00 web01 sshd[5101]: Failed password for alice from 10.20.0.31 port 50122 ssh2
+Oct 27 13:10:06 web01 sshd[5101]: Accepted password for alice from 10.20.0.31 port 50122 ssh2
+Oct 27 13:10:06 web01 sshd[5101]: pam_unix(sshd:session): session opened for user alice(uid=1001) by (uid=0)
+Oct 27 13:12:00 web01 sudo:    alice : TTY=pts/3 ; PWD=/home/alice ; USER=root ; COMMAND=/usr/bin/journalctl -u nginx --since today
+Oct 27 13:13:00 web01 su[5150]: (to root) alice on pts/1
+Oct 27 13:17:00 web01 CRON[4301]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Oct 27 13:17:01 web01 CRON[4301]: pam_unix(cron:session): session closed for user root
+Oct 27 13:41:00 web01 sshd[5101]: pam_unix(sshd:session): session closed for user alice
+Oct 27 14:17:00 web01 CRON[4331]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Oct 27 14:17:01 web01 CRON[4331]: pam_unix(cron:session): session closed for user root
+Oct 27 15:17:00 web01 CRON[4334]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Oct 27 15:17:01 web01 CRON[4334]: pam_unix(cron:session): session closed for user root
+Oct 27 16:17:00 web01 CRON[4365]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Oct 27 16:17:01 web01 CRON[4365]: pam_unix(cron:session): session closed for user root
+Oct 27 17:17:00 web01 CRON[4385]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Oct 27 17:17:01 web01 CRON[4385]: pam_unix(cron:session): session closed for user root
+Oct 27 17:30:00 web01 sshd[4597]: Accepted publickey for deploy from 10.20.0.40 port 60213 ssh2: ED25519 SHA256:f0a890ea47ca738e
+Oct 27 17:30:00 web01 sshd[4597]: pam_unix(sshd:session): session opened for user deploy(uid=1002) by (uid=0)
+Oct 27 17:30:01 web01 systemd-logind[4606]: New session 38 of user deploy.
+Oct 27 17:31:07 web01 sudo:    deploy : TTY=pts/2 ; PWD=/home/deploy ; USER=root ; COMMAND=/usr/bin/systemctl reload nginx
+Oct 27 17:32:00 web01 sshd[4597]: Received disconnect from 10.20.0.40 port 60213:11: disconnected by user
+Oct 27 17:32:00 web01 sshd[4597]: pam_unix(sshd:session): session closed for user deploy
+Oct 27 18:17:00 web01 CRON[4402]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Oct 27 18:17:01 web01 CRON[4402]: pam_unix(cron:session): session closed for user root
+Oct 27 19:17:00 web01 CRON[4442]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Oct 27 19:17:01 web01 CRON[4442]: pam_unix(cron:session): session closed for user root
+Oct 27 19:29:00 web01 sshd[4568]: Failed password for admin from 192.0.2.150 port 33472 ssh2
+Oct 27 19:29:04 web01 sshd[4568]: Connection closed by authenticating user admin 192.0.2.150 port 33472 [preauth]
+Oct 27 20:17:00 web01 CRON[4451]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Oct 27 20:17:01 web01 CRON[4451]: pam_unix(cron:session): session closed for user root
+Oct 27 21:17:00 web01 CRON[4474]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Oct 27 21:17:01 web01 CRON[4474]: pam_unix(cron:session): session closed for user root
+Oct 27 22:17:00 web01 CRON[4478]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Oct 27 22:17:01 web01 CRON[4478]: pam_unix(cron:session): session closed for user root
+Oct 27 23:17:00 web01 CRON[4482]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Oct 27 23:17:01 web01 CRON[4482]: pam_unix(cron:session): session closed for user root

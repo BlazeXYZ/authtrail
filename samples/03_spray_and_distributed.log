@@ -1,0 +1,187 @@
+2026-10-30T09:00:00.387926+00:00 bastion sshd[4018]: Accepted publickey for admin from 10.30.0.2 port 52187 ssh2: ED25519 SHA256:4a9b528b69636321
+2026-10-30T09:00:00.960437+00:00 bastion sshd[4018]: pam_unix(sshd:session): session opened for user admin(uid=1000) by (uid=0)
+2026-10-30T09:00:01.656115+00:00 bastion systemd-logind[4051]: New session 41 of user admin.
+2026-10-30T09:02:48.635017+00:00 bastion sudo:    admin : TTY=pts/0 ; PWD=/home/admin ; USER=root ; COMMAND=/usr/bin/systemctl status sshd
+2026-10-30T09:30:00.013807+00:00 bastion sshd[4018]: Received disconnect from 10.30.0.2 port 52187:11: disconnected by user
+2026-10-30T09:30:00.952965+00:00 bastion sshd[4018]: pam_unix(sshd:session): session closed for user admin
+2026-10-30T14:00:00.245713+00:00 bastion sshd[4070]: Failed password for admin from 198.51.100.23 port 50816 ssh2
+2026-10-30T14:00:03.201058+00:00 bastion sshd[4070]: message repeated 1 times: [ Failed password for admin from 198.51.100.23 port 50816 ssh2]
+2026-10-30T14:00:06.751984+00:00 bastion sshd[4070]: Connection closed by authenticating user admin 198.51.100.23 port 50816 [preauth]
+2026-10-30T14:00:41.902847+00:00 bastion sshd[4098]: Invalid user administrator from 198.51.100.23 port 53708
+2026-10-30T14:00:41.157932+00:00 bastion sshd[4098]: Failed password for invalid user administrator from 198.51.100.23 port 53708 ssh2
+2026-10-30T14:00:44.243187+00:00 bastion sshd[4098]: message repeated 1 times: [ Failed password for invalid user administrator from 198.51.100.23 port 53708 ssh2]
+2026-10-30T14:00:47.665699+00:00 bastion sshd[4098]: Connection closed by invalid user administrator 198.51.100.23 port 53708 [preauth]
+2026-10-30T14:01:11.814989+00:00 bastion sshd[4101]: Invalid user user from 198.51.100.23 port 54768
+2026-10-30T14:01:11.067141+00:00 bastion sshd[4101]: Failed password for invalid user user from 198.51.100.23 port 54768 ssh2
+2026-10-30T14:01:14.167142+00:00 bastion sshd[4101]: message repeated 1 times: [ Failed password for invalid user user from 198.51.100.23 port 54768 ssh2]
+2026-10-30T14:01:17.795062+00:00 bastion sshd[4101]: Connection closed by invalid user user 198.51.100.23 port 54768 [preauth]
+2026-10-30T14:02:07.032518+00:00 bastion sshd[4123]: Invalid user test from 198.51.100.23 port 58329
+2026-10-30T14:02:07.863576+00:00 bastion sshd[4123]: Failed password for invalid user test from 198.51.100.23 port 58329 ssh2
+2026-10-30T14:02:11.907571+00:00 bastion sshd[4123]: Connection closed by invalid user test 198.51.100.23 port 58329 [preauth]
+2026-10-30T14:02:39.826392+00:00 bastion sshd[4150]: Invalid user guest from 198.51.100.23 port 56168
+2026-10-30T14:02:39.965841+00:00 bastion sshd[4150]: Failed password for invalid user guest from 198.51.100.23 port 56168 ssh2
+2026-10-30T14:02:42.447673+00:00 bastion sshd[4150]: message repeated 1 times: [ Failed password for invalid user guest from 198.51.100.23 port 56168 ssh2]
+2026-10-30T14:02:45.414149+00:00 bastion sshd[4150]: Connection closed by invalid user guest 198.51.100.23 port 56168 [preauth]
+2026-10-30T14:03:28.102188+00:00 bastion sshd[4161]: Invalid user oracle from 198.51.100.23 port 44745
+2026-10-30T14:03:28.037629+00:00 bastion sshd[4161]: Failed password for invalid user oracle from 198.51.100.23 port 44745 ssh2
+2026-10-30T14:03:31.142573+00:00 bastion sshd[4161]: message repeated 1 times: [ Failed password for invalid user oracle from 198.51.100.23 port 44745 ssh2]
+2026-10-30T14:03:34.518922+00:00 bastion sshd[4161]: Connection closed by invalid user oracle 198.51.100.23 port 44745 [preauth]
+2026-10-30T14:04:00.657088+00:00 bastion sshd[4191]: Invalid user postgres from 198.51.100.23 port 58293
+2026-10-30T14:04:00.896769+00:00 bastion sshd[4191]: Failed password for invalid user postgres from 198.51.100.23 port 58293 ssh2
+2026-10-30T14:04:04.315648+00:00 bastion sshd[4191]: Connection closed by invalid user postgres 198.51.100.23 port 58293 [preauth]
+2026-10-30T14:04:37.560047+00:00 bastion sshd[4230]: Failed password for ubuntu from 198.51.100.23 port 44266 ssh2
+2026-10-30T14:04:40.613494+00:00 bastion sshd[4230]: message repeated 1 times: [ Failed password for ubuntu from 198.51.100.23 port 44266 ssh2]
+2026-10-30T14:04:43.427374+00:00 bastion sshd[4230]: Connection closed by authenticating user ubuntu 198.51.100.23 port 44266 [preauth]
+2026-10-30T14:05:21.960213+00:00 bastion sshd[4254]: Invalid user pi from 198.51.100.23 port 55115
+2026-10-30T14:05:21.974070+00:00 bastion sshd[4254]: Failed password for invalid user pi from 198.51.100.23 port 55115 ssh2
+2026-10-30T14:05:25.030052+00:00 bastion sshd[4254]: Connection closed by invalid user pi 198.51.100.23 port 55115 [preauth]
+2026-10-30T14:06:12.902443+00:00 bastion sshd[4267]: Failed password for git from 198.51.100.23 port 55660 ssh2
+2026-10-30T14:06:16.342245+00:00 bastion sshd[4267]: Connection closed by authenticating user git 198.51.100.23 port 55660 [preauth]
+2026-10-30T14:07:06.872004+00:00 bastion sshd[4283]: Invalid user jenkins from 198.51.100.23 port 53509
+2026-10-30T14:07:06.601392+00:00 bastion sshd[4283]: Failed password for invalid user jenkins from 198.51.100.23 port 53509 ssh2
+2026-10-30T14:07:10.280058+00:00 bastion sshd[4283]: Connection closed by invalid user jenkins 198.51.100.23 port 53509 [preauth]
+2026-10-30T14:07:39.895423+00:00 bastion sshd[4290]: Invalid user ftp from 198.51.100.23 port 48562
+2026-10-30T14:07:39.669786+00:00 bastion sshd[4290]: Failed password for invalid user ftp from 198.51.100.23 port 48562 ssh2
+2026-10-30T14:07:43.506995+00:00 bastion sshd[4290]: Connection closed by invalid user ftp 198.51.100.23 port 48562 [preauth]
+2026-10-30T14:08:05.940673+00:00 bastion sshd[4297]: Failed password for deploy from 198.51.100.23 port 46218 ssh2
+2026-10-30T14:08:09.158088+00:00 bastion sshd[4297]: Connection closed by authenticating user deploy 198.51.100.23 port 46218 [preauth]
+2026-10-30T14:08:29.435365+00:00 bastion sshd[4327]: Invalid user dev from 198.51.100.23 port 57959
+2026-10-30T14:08:29.915162+00:00 bastion sshd[4327]: Failed password for invalid user dev from 198.51.100.23 port 57959 ssh2
+2026-10-30T14:08:33.124693+00:00 bastion sshd[4327]: Connection closed by invalid user dev 198.51.100.23 port 57959 [preauth]
+2026-10-30T14:08:54.614858+00:00 bastion sshd[4354]: Invalid user support from 198.51.100.23 port 56309
+2026-10-30T14:08:54.347030+00:00 bastion sshd[4354]: Failed password for invalid user support from 198.51.100.23 port 56309 ssh2
+2026-10-30T14:08:58.577609+00:00 bastion sshd[4354]: Connection closed by invalid user support 198.51.100.23 port 56309 [preauth]
+2026-10-30T14:09:46.037762+00:00 bastion sshd[4389]: Invalid user mysql from 198.51.100.23 port 40499
+2026-10-30T14:09:46.324712+00:00 bastion sshd[4389]: Failed password for invalid user mysql from 198.51.100.23 port 40499 ssh2
+2026-10-30T14:09:50.007584+00:00 bastion sshd[4389]: Connection closed by invalid user mysql 198.51.100.23 port 40499 [preauth]
+2026-10-30T14:10:12.994989+00:00 bastion sshd[4426]: Invalid user backup from 198.51.100.23 port 33796
+2026-10-30T14:10:12.206973+00:00 bastion sshd[4426]: Failed password for invalid user backup from 198.51.100.23 port 33796 ssh2
+2026-10-30T14:10:16.427752+00:00 bastion sshd[4426]: Connection closed by invalid user backup 198.51.100.23 port 33796 [preauth]
+2026-10-30T14:10:45.044497+00:00 bastion sshd[4438]: Invalid user ansible from 198.51.100.23 port 55369
+2026-10-30T14:10:45.909932+00:00 bastion sshd[4438]: Failed password for invalid user ansible from 198.51.100.23 port 55369 ssh2
+2026-10-30T14:10:49.356320+00:00 bastion sshd[4438]: Connection closed by invalid user ansible 198.51.100.23 port 55369 [preauth]
+2026-10-30T14:11:19.395052+00:00 bastion sshd[4449]: Invalid user hadoop from 198.51.100.23 port 45147
+2026-10-30T14:11:19.482774+00:00 bastion sshd[4449]: Failed password for invalid user hadoop from 198.51.100.23 port 45147 ssh2
+2026-10-30T14:11:23.912147+00:00 bastion sshd[4449]: Connection closed by invalid user hadoop 198.51.100.23 port 45147 [preauth]
+2026-10-30T14:11:59.650249+00:00 bastion sshd[4487]: Invalid user nagios from 198.51.100.23 port 36129
+2026-10-30T14:11:59.986312+00:00 bastion sshd[4487]: Failed password for invalid user nagios from 198.51.100.23 port 36129 ssh2
+2026-10-30T14:12:02.850932+00:00 bastion sshd[4487]: message repeated 1 times: [ Failed password for invalid user nagios from 198.51.100.23 port 36129 ssh2]
+2026-10-30T14:12:05.531656+00:00 bastion sshd[4487]: Connection closed by invalid user nagios 198.51.100.23 port 36129 [preauth]
+2026-10-30T14:12:33.458695+00:00 bastion sshd[4505]: Invalid user minecraft from 198.51.100.23 port 42634
+2026-10-30T14:12:33.270776+00:00 bastion sshd[4505]: Failed password for invalid user minecraft from 198.51.100.23 port 42634 ssh2
+2026-10-30T14:12:36.546441+00:00 bastion sshd[4505]: message repeated 1 times: [ Failed password for invalid user minecraft from 198.51.100.23 port 42634 ssh2]
+2026-10-30T14:12:39.317711+00:00 bastion sshd[4505]: Connection closed by invalid user minecraft 198.51.100.23 port 42634 [preauth]
+2026-10-30T14:13:16.435379+00:00 bastion sshd[4508]: Invalid user ec2-user from 198.51.100.23 port 58602
+2026-10-30T14:13:16.608137+00:00 bastion sshd[4508]: Failed password for invalid user ec2-user from 198.51.100.23 port 58602 ssh2
+2026-10-30T14:13:20.330171+00:00 bastion sshd[4508]: Connection closed by invalid user ec2-user 198.51.100.23 port 58602 [preauth]
+2026-10-30T14:13:40.139742+00:00 bastion sshd[4548]: Invalid user centos from 198.51.100.23 port 53483
+2026-10-30T14:13:40.062998+00:00 bastion sshd[4548]: Failed password for invalid user centos from 198.51.100.23 port 53483 ssh2
+2026-10-30T14:13:43.664307+00:00 bastion sshd[4548]: message repeated 1 times: [ Failed password for invalid user centos from 198.51.100.23 port 53483 ssh2]
+2026-10-30T14:13:46.657814+00:00 bastion sshd[4548]: Connection closed by invalid user centos 198.51.100.23 port 53483 [preauth]
+2026-10-30T14:14:16.961899+00:00 bastion sshd[4573]: Invalid user vagrant from 198.51.100.23 port 55026
+2026-10-30T14:14:16.369703+00:00 bastion sshd[4573]: Failed password for invalid user vagrant from 198.51.100.23 port 55026 ssh2
+2026-10-30T14:14:19.638440+00:00 bastion sshd[4573]: message repeated 1 times: [ Failed password for invalid user vagrant from 198.51.100.23 port 55026 ssh2]
+2026-10-30T14:14:22.741291+00:00 bastion sshd[4573]: Connection closed by invalid user vagrant 198.51.100.23 port 55026 [preauth]
+2026-10-30T14:14:50.063519+00:00 bastion sshd[4577]: Invalid user docker from 198.51.100.23 port 52080
+2026-10-30T14:14:50.708858+00:00 bastion sshd[4577]: Failed password for invalid user docker from 198.51.100.23 port 52080 ssh2
+2026-10-30T14:14:53.022284+00:00 bastion sshd[4577]: message repeated 1 times: [ Failed password for invalid user docker from 198.51.100.23 port 52080 ssh2]
+2026-10-30T14:14:56.387097+00:00 bastion sshd[4577]: Connection closed by invalid user docker 198.51.100.23 port 52080 [preauth]
+2026-10-30T14:15:24.630670+00:00 bastion sshd[4599]: Invalid user x from 10.0.0.5 port 22 ssh2 from 198.51.100.23 port 52188
+2026-10-30T14:15:24.335570+00:00 bastion sshd[4599]: Failed password for invalid user x from 10.0.0.5 port 22 ssh2 from 198.51.100.23 port 52188 ssh2
+2026-10-30T14:15:27.186039+00:00 bastion sshd[4599]: message repeated 1 times: [ Failed password for invalid user x from 10.0.0.5 port 22 ssh2 from 198.51.100.23 port 52188 ssh2]
+2026-10-30T14:15:30.381634+00:00 bastion sshd[4599]: Connection closed by invalid user x from 10.0.0.5 port 22 ssh2 198.51.100.23 port 52188 [preauth]
+2026-10-30T14:15:55.624554+00:00 bastion sshd[4625]: Invalid user <script>alert(1)</script> from 198.51.100.23 port 60418
+2026-10-30T14:15:55.276967+00:00 bastion sshd[4625]: Failed password for invalid user <script>alert(1)</script> from 198.51.100.23 port 60418 ssh2
+2026-10-30T14:15:59.314996+00:00 bastion sshd[4625]: Connection closed by invalid user <script>alert(1)</script> 198.51.100.23 port 60418 [preauth]
+2026-10-30T14:40:00.809787+00:00 bastion sshd[4652]: Invalid user oracle from 198.51.100.99 port 36204
+2026-10-30T14:40:01.852551+00:00 bastion sshd[4652]: Connection closed by invalid user oracle 198.51.100.99 port 36204 [preauth]
+2026-10-30T14:40:15.770884+00:00 bastion sshd[4691]: Invalid user test from 198.51.100.99 port 55172
+2026-10-30T14:40:16.137804+00:00 bastion sshd[4691]: Connection closed by invalid user test 198.51.100.99 port 55172 [preauth]
+2026-10-30T14:40:39.685478+00:00 bastion sshd[4726]: Invalid user user from 198.51.100.99 port 40060
+2026-10-30T14:40:40.842853+00:00 bastion sshd[4726]: Connection closed by invalid user user 198.51.100.99 port 40060 [preauth]
+2026-10-30T14:41:02.196497+00:00 bastion sshd[4744]: Invalid user ftpuser from 198.51.100.99 port 43508
+2026-10-30T14:41:03.711001+00:00 bastion sshd[4744]: Connection closed by invalid user ftpuser 198.51.100.99 port 43508 [preauth]
+2026-10-30T14:41:30.629904+00:00 bastion sshd[4753]: Invalid user support from 198.51.100.99 port 36105
+2026-10-30T14:41:31.337605+00:00 bastion sshd[4753]: Connection closed by invalid user support 198.51.100.99 port 36105 [preauth]
+2026-10-30T14:41:55.849100+00:00 bastion sshd[4770]: Invalid user guest from 198.51.100.99 port 47134
+2026-10-30T14:41:56.897093+00:00 bastion sshd[4770]: Connection closed by invalid user guest 198.51.100.99 port 47134 [preauth]
+2026-10-30T14:42:15.778116+00:00 bastion sshd[4778]: Invalid user ubnt from 198.51.100.99 port 43801
+2026-10-30T14:42:16.681818+00:00 bastion sshd[4778]: Connection closed by invalid user ubnt 198.51.100.99 port 43801 [preauth]
+2026-10-30T14:42:36.283744+00:00 bastion sshd[4817]: Invalid user admin1 from 198.51.100.99 port 47549
+2026-10-30T14:42:37.235958+00:00 bastion sshd[4817]: Connection closed by invalid user admin1 198.51.100.99 port 47549 [preauth]
+2026-10-30T14:43:16.555354+00:00 bastion sshd[4827]: Invalid user tomcat from 198.51.100.99 port 33879
+2026-10-30T14:43:17.200072+00:00 bastion sshd[4827]: Connection closed by invalid user tomcat 198.51.100.99 port 33879 [preauth]
+2026-10-30T14:43:41.905684+00:00 bastion sshd[4866]: Invalid user sonar from 198.51.100.99 port 38783
+2026-10-30T14:43:42.292125+00:00 bastion sshd[4866]: Connection closed by invalid user sonar 198.51.100.99 port 38783 [preauth]
+2026-10-30T15:00:00.135988+00:00 bastion sshd[4891]: Failed password for deploy from 192.0.2.11 port 52084 ssh2
+2026-10-30T15:00:04.441736+00:00 bastion sshd[4891]: Connection closed by authenticating user deploy 192.0.2.11 port 52084 [preauth]
+2026-10-30T15:03:00.664985+00:00 bastion sshd[4923]: Failed password for deploy from 192.0.2.12 port 44117 ssh2
+2026-10-30T15:03:03.437157+00:00 bastion sshd[4923]: message repeated 1 times: [ Failed password for deploy from 192.0.2.12 port 44117 ssh2]
+2026-10-30T15:03:06.304505+00:00 bastion sshd[4923]: Connection closed by authenticating user deploy 192.0.2.12 port 44117 [preauth]
+2026-10-30T15:07:00.163575+00:00 bastion sshd[4928]: Failed password for deploy from 192.0.2.13 port 46309 ssh2
+2026-10-30T15:07:03.209265+00:00 bastion sshd[4928]: message repeated 1 times: [ Failed password for deploy from 192.0.2.13 port 46309 ssh2]
+2026-10-30T15:07:06.004888+00:00 bastion sshd[4928]: Connection closed by authenticating user deploy 192.0.2.13 port 46309 [preauth]
+2026-10-30T15:11:00.232879+00:00 bastion sshd[4966]: Failed password for deploy from 192.0.2.14 port 56271 ssh2
+2026-10-30T15:11:03.033888+00:00 bastion sshd[4966]: message repeated 1 times: [ Failed password for deploy from 192.0.2.14 port 56271 ssh2]
+2026-10-30T15:11:06.781737+00:00 bastion sshd[4966]: Connection closed by authenticating user deploy 192.0.2.14 port 56271 [preauth]
+2026-10-30T15:15:00.932922+00:00 bastion sshd[5003]: Failed password for deploy from 192.0.2.15 port 43944 ssh2
+2026-10-30T15:15:03.238515+00:00 bastion sshd[5003]: message repeated 1 times: [ Failed password for deploy from 192.0.2.15 port 43944 ssh2]
+2026-10-30T15:15:06.903380+00:00 bastion sshd[5003]: Connection closed by authenticating user deploy 192.0.2.15 port 43944 [preauth]
+2026-10-30T15:16:00.256412+00:00 bastion sshd[5013]: Failed password for deploy from 192.0.2.16 port 59316 ssh2
+2026-10-30T15:16:03.047266+00:00 bastion sshd[5013]: message repeated 1 times: [ Failed password for deploy from 192.0.2.16 port 59316 ssh2]
+2026-10-30T15:16:06.036851+00:00 bastion sshd[5013]: Connection closed by authenticating user deploy 192.0.2.16 port 59316 [preauth]
+2026-10-30T15:18:00.013783+00:00 bastion sshd[5052]: Failed password for deploy from 192.0.2.11 port 34385 ssh2
+2026-10-30T15:18:03.504415+00:00 bastion sshd[5052]: message repeated 1 times: [ Failed password for deploy from 192.0.2.11 port 34385 ssh2]
+2026-10-30T15:18:06.781501+00:00 bastion sshd[5052]: Connection closed by authenticating user deploy 192.0.2.11 port 34385 [preauth]
+2026-10-30T15:19:00.250658+00:00 bastion sshd[5087]: Failed password for deploy from 192.0.2.12 port 42594 ssh2
+2026-10-30T15:19:04.695096+00:00 bastion sshd[5087]: Connection closed by authenticating user deploy 192.0.2.12 port 42594 [preauth]
+2026-10-30T15:20:00.119104+00:00 bastion sshd[5093]: Failed password for deploy from 192.0.2.13 port 52827 ssh2
+2026-10-30T15:20:00.758161+00:00 bastion sshd[5270]: Accepted publickey for deploy from 10.30.0.8 port 50971 ssh2: ED25519 SHA256:4ea6e40004954eb7
+2026-10-30T15:20:00.398708+00:00 bastion sshd[5270]: pam_unix(sshd:session): session opened for user deploy(uid=1002) by (uid=0)
+2026-10-30T15:20:01.594263+00:00 bastion systemd-logind[5278]: New session 32 of user deploy.
+2026-10-30T15:20:03.357934+00:00 bastion sshd[5093]: message repeated 1 times: [ Failed password for deploy from 192.0.2.13 port 52827 ssh2]
+2026-10-30T15:20:06.131497+00:00 bastion sshd[5093]: Connection closed by authenticating user deploy 192.0.2.13 port 52827 [preauth]
+2026-10-30T15:21:00.187229+00:00 bastion sshd[5270]: Received disconnect from 10.30.0.8 port 50971:11: disconnected by user
+2026-10-30T15:21:00.045048+00:00 bastion sshd[5270]: pam_unix(sshd:session): session closed for user deploy
+2026-10-30T15:23:00.231528+00:00 bastion sshd[5099]: Failed password for deploy from 192.0.2.14 port 44297 ssh2
+2026-10-30T15:23:03.206919+00:00 bastion sshd[5099]: message repeated 1 times: [ Failed password for deploy from 192.0.2.14 port 44297 ssh2]
+2026-10-30T15:23:06.128158+00:00 bastion sshd[5099]: Connection closed by authenticating user deploy 192.0.2.14 port 44297 [preauth]
+2026-10-30T15:24:00.287056+00:00 bastion sshd[5117]: Failed password for deploy from 192.0.2.15 port 58709 ssh2
+2026-10-30T15:24:04.966542+00:00 bastion sshd[5117]: Connection closed by authenticating user deploy 192.0.2.15 port 58709 [preauth]
+2026-10-30T15:26:00.598627+00:00 bastion sshd[5151]: Failed password for deploy from 192.0.2.16 port 53366 ssh2
+2026-10-30T15:26:04.904454+00:00 bastion sshd[5151]: Connection closed by authenticating user deploy 192.0.2.16 port 53366 [preauth]
+2026-10-30T15:30:00.281632+00:00 bastion sshd[5171]: Failed password for deploy from 192.0.2.11 port 40902 ssh2
+2026-10-30T15:30:04.648113+00:00 bastion sshd[5171]: Connection closed by authenticating user deploy 192.0.2.11 port 40902 [preauth]
+2026-10-30T15:34:00.814216+00:00 bastion sshd[5204]: Failed password for deploy from 192.0.2.12 port 43355 ssh2
+2026-10-30T15:34:04.859335+00:00 bastion sshd[5204]: Connection closed by authenticating user deploy 192.0.2.12 port 43355 [preauth]
+2026-10-30T15:35:00.130680+00:00 bastion sshd[5215]: Failed password for deploy from 192.0.2.13 port 34281 ssh2
+2026-10-30T15:35:04.052254+00:00 bastion sshd[5215]: Connection closed by authenticating user deploy 192.0.2.13 port 34281 [preauth]
+2026-10-30T15:36:00.747340+00:00 bastion sshd[5220]: Failed password for deploy from 192.0.2.14 port 60766 ssh2
+2026-10-30T15:36:03.090311+00:00 bastion sshd[5220]: message repeated 1 times: [ Failed password for deploy from 192.0.2.14 port 60766 ssh2]
+2026-10-30T15:36:06.540440+00:00 bastion sshd[5220]: Connection closed by authenticating user deploy 192.0.2.14 port 60766 [preauth]
+2026-10-30T15:40:00.075261+00:00 bastion sshd[5233]: Failed password for deploy from 192.0.2.15 port 43076 ssh2
+2026-10-30T15:40:03.368353+00:00 bastion sshd[5233]: message repeated 1 times: [ Failed password for deploy from 192.0.2.15 port 43076 ssh2]
+2026-10-30T15:40:06.404537+00:00 bastion sshd[5233]: Connection closed by authenticating user deploy 192.0.2.15 port 43076 [preauth]
+2026-10-30T15:44:00.200363+00:00 bastion sshd[5259]: Failed password for deploy from 192.0.2.16 port 41449 ssh2
+2026-10-30T15:44:03.344746+00:00 bastion sshd[5259]: message repeated 1 times: [ Failed password for deploy from 192.0.2.16 port 41449 ssh2]
+2026-10-30T15:44:06.449524+00:00 bastion sshd[5259]: Connection closed by authenticating user deploy 192.0.2.16 port 41449 [preauth]
+2026-10-30T16:10:00.633795+00:00 bastion sshd[5304]: Failed password for root from 2001:db8:bad::7 port 47868 ssh2
+2026-10-30T16:10:03.681858+00:00 bastion sshd[5304]: message repeated 2 times: [ Failed password for root from 2001:db8:bad::7 port 47868 ssh2]
+2026-10-30T16:10:08.820638+00:00 bastion sshd[5304]: Connection closed by authenticating user root 2001:db8:bad::7 port 47868 [preauth]
+2026-10-30T16:10:21.840078+00:00 bastion sshd[5331]: Failed password for root from 2001:db8:bad::7 port 53630 ssh2
+2026-10-30T16:10:24.045549+00:00 bastion sshd[5331]: message repeated 2 times: [ Failed password for root from 2001:db8:bad::7 port 53630 ssh2]
+2026-10-30T16:10:29.653185+00:00 bastion sshd[5331]: Connection closed by authenticating user root 2001:db8:bad::7 port 53630 [preauth]
+2026-10-30T16:10:40.657923+00:00 bastion sshd[5337]: Failed password for root from 2001:db8:bad::7 port 44971 ssh2
+2026-10-30T16:10:43.520252+00:00 bastion sshd[5337]: message repeated 2 times: [ Failed password for root from 2001:db8:bad::7 port 44971 ssh2]
+2026-10-30T16:10:48.796963+00:00 bastion sshd[5337]: Connection closed by authenticating user root 2001:db8:bad::7 port 44971 [preauth]
+2026-10-30T16:10:58.438611+00:00 bastion sshd[5366]: Failed password for root from 2001:db8:bad::7 port 55513 ssh2
+2026-10-30T16:11:01.483225+00:00 bastion sshd[5366]: message repeated 2 times: [ Failed password for root from 2001:db8:bad::7 port 55513 ssh2]
+2026-10-30T16:11:06.018795+00:00 bastion sshd[5366]: Connection closed by authenticating user root 2001:db8:bad::7 port 55513 [preauth]
+2026-10-30T16:11:14.283210+00:00 bastion sshd[5382]: Failed password for root from 2001:db8:bad::7 port 50326 ssh2
+2026-10-30T16:11:17.728937+00:00 bastion sshd[5382]: message repeated 2 times: [ Failed password for root from 2001:db8:bad::7 port 50326 ssh2]
+2026-10-30T16:11:22.618557+00:00 bastion sshd[5382]: Connection closed by authenticating user root 2001:db8:bad::7 port 50326 [preauth]
+2026-10-30T17:05:00.922400+00:00 bastion sshd[5412]: Accepted publickey for root from 2001:db8:10::5 port 40122 ssh2: ED25519 SHA256:5cd6046da3a85f21
+2026-10-30T17:05:00.029459+00:00 bastion sshd[5412]: pam_unix(sshd:session): session opened for user root(uid=0) by (uid=0)
+2026-10-30T17:05:01.392414+00:00 bastion systemd-logind[5435]: New session 77 of user root.
+2026-10-30T17:09:00.941468+00:00 bastion sshd[5412]: Received disconnect from 2001:db8:10::5 port 40122:11: disconnected by user
+2026-10-30T17:09:00.586232+00:00 bastion sshd[5412]: pam_unix(sshd:session): session closed for user root

