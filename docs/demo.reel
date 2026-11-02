@@ -1,0 +1,13 @@
+# README demo. Render from the repo root:
+#   termreel render docs/demo.reel -o docs/demo.svg
+@cwd ..
+@size 100x28
+@title authtrail
+@prompt [bold #db94ed]~/authtrail[/] [#ee15ee]❯[/]
+@typing 24
+$ python -m authtrail samples/01_quiet_server.log --year 2026
+@sleep 2.5
+@clear
+@max-lines 22
+$ python -m authtrail samples/02_bruteforce_compromise.log --year 2026
+@sleep 4
